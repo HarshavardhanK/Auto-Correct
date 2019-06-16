@@ -50,7 +50,7 @@ string naive_autocorrect(string word) {
     
     int min_edit = 10;
     string nearest = "Ain't working";
-    int len = word.length();
+    int len = (int)word.length();
     
     for(auto& str: dic) {
         
@@ -106,7 +106,7 @@ public:
             return node;
         }
         
-        int dist = edit_distance(node->data, key, node->data.length(), key.length());
+        int dist = edit_distance(node->data, key, (int)node->data.length(), (int)key.length());
         
         if(dist < min_edit) {
             min_edit = dist;
