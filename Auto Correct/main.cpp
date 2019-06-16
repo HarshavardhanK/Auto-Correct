@@ -8,8 +8,12 @@
 
 #include <iostream>
 
+#include "Edit_Distance.hpp"
+#include "Utilities.hpp"
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+   // cout << edit_distance("hello", "helo", 5, 4) << endl;
+    time_function(test_edit_distance);
     return 0;
 }
