@@ -9,7 +9,7 @@
 #include "Edit_Distance.hpp"
 
 
-int edit_distance_naive(string wordA, string wordB, int lengthA, int lengthB) {
+int edit_distance_naive(string wordA, string wordB, size_t lengthA, size_t lengthB) {
     
     if(lengthA == 0) {
         return lengthB;
@@ -30,7 +30,7 @@ int edit_distance_naive(string wordA, string wordB, int lengthA, int lengthB) {
     return 1 + min(insert, min(replace, remove));
 }
 
-int edit_distance(string wordA, string wordB, int lengthA, int lengthB) {
+int edit_distance(string wordA, string wordB, size_t lengthA, size_t lengthB) {
     
     int edit_distance_arr[lengthA + 1][lengthB + 1];
     // initialize_2D_array(&edit_distance_arr, lengthA + 1, lengthB + 1, 0);
@@ -70,8 +70,8 @@ void test_edit_distance() {
     string wordA = "Hello how are you? Its been a long time since seeing you. Are you doing well tonight?";
     string wordB = "Hello ho r u? Its ben a logn time sinc seeing u. Ar you doin well tonigh?";
     
-    int lengthA = (int)wordA.length();
-    int lengthB = (int)wordB.length();
+    size_t lengthA = wordA.length();
+    size_t lengthB = wordB.length();
     
     cout << edit_distance(wordA, wordB, lengthA, lengthB) << endl;
 }

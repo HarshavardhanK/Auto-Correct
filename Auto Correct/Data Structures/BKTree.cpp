@@ -41,12 +41,50 @@ class BKTree {
     
     BKNode* root;
     
-    vector<BKNode*> *ALL_NODES;
+   // vector<BKNode*> *ALL_NODES = new vector<BKNode*>(20);
+    BKNode TREE[MAX_WORDS]; //TODO:- CONVER TO VECTOR<BKNODE*> LATER
+    
+    //HELPER VARIABLES
+    int index_pointer;
     
 public:
     
-    void add();
+    BKTree(string root_word) {
+        
+        root = new BKNode(root_word);
+        index_pointer = 0;
+        
+    }
+    
+    void add(BKNode*, BKNode*);
+    
+    
+    //SETTERS
+    
+    //GETTERS
+   // vector<BKNode&>* get_ALL_NODES() {return ALL_NODES;}
     
 };
+
+void BKTree::add(BKNode* root, BKNode* current) {
+    
+    if(root->get_word() == "") {
+        root = current;
+        return;
+    }
+    
+    int edits = edit_distance(root->get_word(), current->get_word(), root->get_word().length(), current->get_word().length());
+    
+    
+    if(TREE[root->get_next()[edits]].get_word() == "") {
+        index_pointer++;
+        TREE[index_pointer] = *current;
+        root->get_next()[edits] = index_pointer;
+        
+    } else {
+        add(&TREE[root->get_next()[edits]], current);
+    }
+    
+}
 
 //MARK:- NAIVE APPROACH WITH STRUCTS...

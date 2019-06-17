@@ -12,7 +12,7 @@
 #include <iostream>
 using namespace std;
 
-int edit_distance(string wordA, string wordB, int lengthA, int lengthB);
-int edit_distance_dynamic(string, string, int, int);
+int edit_distance_naive(string wordA, string wordB, size_t lengthA, size_t lengthB);
+int edit_distance(string, string, size_t, size_t);
 void test_edit_distance();
 #endif /* Edit_Distance_hpp */
