@@ -10,6 +10,7 @@
 
 #include "Edit_Distance.hpp"
 #include "Utilities.hpp"
+//#include "BKTree.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
