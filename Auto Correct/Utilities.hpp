@@ -26,6 +26,17 @@ template<typename T> void initialize_2D_array(T** *array, int rows, int cols, T 
     
 }
 
+template <typename T> void print_vector(std::vector<T>& list) {
+    
+   // size_t length = list.size();
+    
+    for(auto element: list) {
+        std::cout << element << " ";
+    }
+    
+    std::cout << std::endl;
+}
+
 //MARK:- TIMER FUNCTIONS
 void time_function(void  (*function) (void)) {
     

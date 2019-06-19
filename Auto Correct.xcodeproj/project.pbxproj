@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6A5084922B7666D00BE134E /* BKTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6A5084822B7666D00BE134E /* BKTree.cpp */; };
+		D6A5084922B7666D00BE134E /* BKTree.hpp in Sources */ = {isa = PBXBuildFile; fileRef = D6A5084822B7666D00BE134E /* BKTree.hpp */; };
 		D6C99B7522B6A89000235CC7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6C99B7422B6A89000235CC7 /* main.cpp */; };
 		D6C99B8222B6AB1F00235CC7 /* Edit_Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6C99B8022B6AB1F00235CC7 /* Edit_Distance.cpp */; };
 		D6C99B8422B6AF1700235CC7 /* Utilities.hpp in Sources */ = {isa = PBXBuildFile; fileRef = D6C99B8322B6AF1700235CC7 /* Utilities.hpp */; };
@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D6A5084822B7666D00BE134E /* BKTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BKTree.cpp; sourceTree = "<group>"; };
+		D6A5084822B7666D00BE134E /* BKTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BKTree.hpp; sourceTree = "<group>"; };
 		D6C99B7122B6A89000235CC7 /* Auto Correct */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Auto Correct"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C99B7422B6A89000235CC7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D6C99B7C22B6A8BD00235CC7 /* BinarySTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinarySTree.hpp; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C99B7C22B6A8BD00235CC7 /* BinarySTree.hpp */,
-				D6A5084822B7666D00BE134E /* BKTree.cpp */,
+				D6A5084822B7666D00BE134E /* BKTree.hpp */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A5084922B7666D00BE134E /* BKTree.cpp in Sources */,
+				D6A5084922B7666D00BE134E /* BKTree.hpp in Sources */,
 				D6C99B8222B6AB1F00235CC7 /* Edit_Distance.cpp in Sources */,
 				D6C99B7522B6A89000235CC7 /* main.cpp in Sources */,
 				D6C99B8422B6AF1700235CC7 /* Utilities.hpp in Sources */,
