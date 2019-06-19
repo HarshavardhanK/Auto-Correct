@@ -32,7 +32,9 @@ public:
         }
     }
     
-    BKNode() {}
+    BKNode() {
+        word = "";
+    }
     
    // BKNode() {std::cout << "Empty initialization of BKNode\n";}
     
@@ -57,6 +59,8 @@ class BKTree {
    // vector<BKNode*> *ALL_NODES = new vector<BKNode*>(20);
     BKNode TREE[MAX_WORDS]; //TODO:- CONVER TO VECTOR<BKNODE*> LATER
     
+    vector<BKNode*> tree;
+    
     //HELPER VARIABLES
     int index_pointer;
     int size;
@@ -69,6 +73,13 @@ public:
         //TREE = new BKNode[MAX_WORDS];
         index_pointer = 0;
         size = 0;
+        
+       // tree(MAX_WORDS, new BKNode);
+        
+        for(int i = 0; i < MAX_WORDS; i++) {
+            BKNode* node = new BKNode;
+            tree.push_back(node);
+        }
         
     }
     
@@ -98,17 +109,18 @@ void BKTree::add(BKNode* root, BKNode* current) {
     int edits = edit_distance(root->get_word(), current->get_word(), root->get_word().length(), current->get_word().length());
     
     
-    if(TREE[root->next[edits]].get_word() == "") {
+    if(tree[root->next[edits]]->get_word() == "") {
        // cout << TREE[root->next[edits]].get_word() << " ";
         index_pointer++;
-        TREE[index_pointer] = *current;
+        tree[index_pointer] = current;
+        //tree.insert(index_pointer, &current);
         root->next[edits] = index_pointer;
         
         size++;
         
     } else {
         size++;
-        add(&TREE[root->next[edits]], current);
+        add(tree[root->next[edits]], current);
         
         
     }
@@ -155,7 +167,7 @@ void BKTree::print_tree_nodes() {
     if(size != 0) {
         
         for(int i = 0; i < size; i++) {
-            cout << TREE[i].get_word() << endl;
+            cout << tree[i]->get_word() << endl;
         }
         
     } else {

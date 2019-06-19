@@ -26,9 +26,9 @@ int main(int argc, const char * argv[]) {
    // tree->add(root, new BKNode("hello"));
     string word = "hep";
     
-    vector<string> similar = tree->get_similar_words(*root, word);
+    //vector<string> similar = tree->get_similar_words(*root, word);
     
-    print_vector(similar);
+    //print_vector(similar);
     
     
     cout << root->get_word() << endl;
